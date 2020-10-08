@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-test-eb915": {
+      "hosting": {
+        "angular.io-example": [
+          "angular-test-eb915"
+        ]
+      }
+    }
+  }
+}

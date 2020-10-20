@@ -9,7 +9,7 @@
     <span>{{ items.price | currency }}</span>
 </div>
 
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+<form *ngIf="items.length > 0" [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
 
     <div>
         <label for="name">
@@ -28,3 +28,5 @@
     <button class="button" type="submit">Purchase</button>
 
 </form>
+
+<div *ngIf="items.length === 0">No items in cart...</div>
